@@ -1,9 +1,12 @@
-import { Module } from "@nestjs/common";
+import { forwardRef, Module } from "@nestjs/common";
 import * as S from "./services";
 import * as C from "./controllers";
+import * as M from "../"
 
 @Module({
-  imports: [],
+  imports: [
+    forwardRef(() => M.AddressesModule)
+  ],
   controllers: [
     C.CreateUserController,
     C.GetUserByIdController,

@@ -6,18 +6,13 @@ import * as C from "./controllers";
   imports: [],
   controllers: [
     C.CreateAddressController,
-    C.GetUserByIdController,
-    C.GetUsersController,
-    C.DeleteUserController,
-    C.UpdateUserController,
   ],
   providers: [
     S.CreateAddressService,
-    S.EmailExistsService,
-    S.GetUserByIdService,
-    S.GetUsersService,
-    S.DeleteUserService,
-    S.UpdateUserService,
+    S.DeleteAddressService,
+  ],
+  exports: [
+    S.DeleteAddressService
   ]
 })
 export class AddressesModule {}
